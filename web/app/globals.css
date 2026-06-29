@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 250, 250, 250;
+  --background-end-rgb: 245, 245, 245;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #fafafa;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.grade-badge {
+  @apply inline-flex items-center justify-center font-bold rounded px-2 py-0.5 text-white text-sm;
+}
+
+table.data-table {
+  @apply w-full border-collapse;
+}
+
+table.data-table thead tr {
+  @apply bg-truenicks-navy text-white;
+}
+
+table.data-table thead th {
+  @apply px-4 py-3 text-left text-sm font-semibold;
+}
+
+table.data-table tbody tr:nth-child(even) {
+  @apply bg-gray-50;
+}
+
+table.data-table tbody tr:hover {
+  @apply bg-blue-50;
+}
+
+table.data-table tbody td {
+  @apply px-4 py-3 text-sm border-b border-gray-100;
+}
